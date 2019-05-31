@@ -135,9 +135,40 @@ int main(){
 				break;
 			case 3:
 				system("clear");
+				existe = 0;
+				for(i=0; i<tamA; i++)
+					for(j=0; j<tamB; j++)
+						if (A[i] != B[j]){
+							existe = 1;
+							printf("Os conjuntos não são iguais!\n");
+							break;
+						}
+				if(existe == 0 && tamA == tamB)
+					printf("Os conjuntos são iguais!\n");
 				break;
 			case 4:
 				system("clear");
+				existe = 0;
+				for(i=0; i<tamA; i++)
+					for(j=0; j<tamB; j++)
+						if (A[i] != B[j]){
+							existe = 1;
+							printf("A não está contido em B!\n");
+							break;
+						}
+				if(existe == 0)
+					printf("A está contido em B!\n");
+
+				existe = 0;
+				for(i=0; i<tamB; i++)
+					for(j=0; j<tamA; j++)
+						if (B[i] != A[j]){
+							existe = 1;
+							printf("B não está contido em A!\n");
+							break;
+						}
+				if(existe == 0)
+					printf("B está contido em A!\n");
 				break;
 			case 5:
 				system("clear");
